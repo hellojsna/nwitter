@@ -31,6 +31,11 @@ const Nweet = ({ nweetObj, isOwner }) => {
     };
     return (
         <div className="nweet">
+            <script>
+                function showImage {
+                    
+                }
+            </script>
             {editing ? (
                 <>
                     <form onSubmit={onSubmit} className="container nweetEdit">
@@ -57,7 +62,9 @@ const Nweet = ({ nweetObj, isOwner }) => {
                 <>
                     <h4>{nweetObj.text}</h4>
                     {nweetObj.attachmentUrl && (
-                        <img src={nweetObj.attachmentUrl} alt="attachment" />
+                        <a href={nweetObj.attachmentUrl} target="_blank" >
+                        <img src={nweetObj.attachmentUrl} id={nweetObj.attachmentUrl} alt="attachment" />
+                        </a>
                     )}
                     {isOwner && (
                         <div class="nweet__actions">
